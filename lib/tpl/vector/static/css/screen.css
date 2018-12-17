@@ -53,6 +53,15 @@ hr {
   text-align: center;
   width: auto !important;
 }
+@media (max-width: 750px)
+{
+  hr {
+    border: 0 none;
+    text-align: center;
+    width: 100%;
+    clear: both;
+  }
+}
 caption,
 legend {
   color: __text_neu__;
