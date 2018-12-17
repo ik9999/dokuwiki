@@ -9,7 +9,6 @@
 /conf/lang/*
 /conf/plugin_lang/*
 /conf/plugins.local.*
-/conf/tpl/*
 .htaccess
 *.swp
 *.bak
@@ -36,9 +35,6 @@
 !/data/pages/wiki/dokuwiki.txt
 !/data/pages/wiki/syntax.txt
 !/data/pages/wiki/welcome.txt
-/lib/tpl/*
-!/lib/tpl/dokuwiki
-!/lib/tpl/index.php
 /lib/plugins/*
 !/lib/plugins/acl
 !/lib/plugins/authad
