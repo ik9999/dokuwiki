@@ -213,7 +213,26 @@ function html_btn($name, $id, $akey, $params, $method='get', $tooltip='', $label
         $params['id'] = $id;
     }
 
-    $ret .= '<form class="button btn_'.$name.'" method="'.$method.'" action="'.$script.'"><div class="no">';
+    $ret .= '<a ';
+
+    if($akey){
+        $tip .= ' ['.strtoupper($akey).']';
+        $ret .= 'accesskey="'.$akey.'" ';
+    }
+    $ret .= 'title="'.$tip.'" ';
+
+    $ret .= 'href="'.$script.'?';
+
+    if(is_array($params)){
+        foreach($params as $key => $val) {
+            $ret .= $key.'=';
+            $ret .= hsc($val).'&';
+        }
+    }
+
+    $ret .= '">'.hsc($label).'</a>';
+
+    /*$ret .= '<form class="button btn_'.$name.'" method="'.$method.'" action="'.$script.'"><div class="no">';
 
     if(is_array($params)){
         foreach($params as $key => $val) {
@@ -241,7 +260,7 @@ function html_btn($name, $id, $akey, $params, $method='get', $tooltip='', $label
         $ret .= hsc($label);
     }
     $ret .= '</button>';
-    $ret .= '</div></form>';
+    $ret .= '</div></form>';*/
 
     return $ret;
 }
