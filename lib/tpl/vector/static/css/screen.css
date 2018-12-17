@@ -51,7 +51,7 @@ body {
 hr {
   border: 0 none;
   text-align: center;
-  width: 100%;
+  width: auto !important;
 }
 caption,
 legend {
