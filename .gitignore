@@ -36,6 +36,7 @@
 !/data/pages/wiki/syntax.txt
 !/data/pages/wiki/welcome.txt
 /lib/plugins/*
+!/lib/plugins/todo
 !/lib/plugins/acl
 !/lib/plugins/authad
 !/lib/plugins/authldap
